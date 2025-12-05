@@ -65,7 +65,7 @@ user-onboarding = { path = "lana/user-onboarding" }
 # External dependencies
 es-entity = { version = "0.10.5", features = ["event-context", "tracing-context", "instrument"] }
 cala-ledger = "0.12.12"
-job = "0.2.10"
+job = "0.2.11"
 sim-time = "0.10"
 cala-cel-interpreter = "0.12"
 
@@ -131,7 +131,7 @@ strum = { version = "0.27", features = ["derive"] }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_yaml = "0.9.32"
 serde_json = "1.0.145"
-serde_with = "3.16.0"
+serde_with = "3.16.1"
 futures = "0.3.29"
 http = "1.4"
 reqwest = { version = "0.12.24", default-features = false, features = ["json", "rustls-tls", "charset", "http2", "macos-system-configuration", "multipart"] }
