@@ -568,12 +568,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4c7f02d4ea65f2c1853089ffd8d2787bdbc63de2f0d29dedbcf8ccdfa0ccd4cf"
 
 [[package]]
-name = "base16ct"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd307490d624467aa6f74b0eabb77633d1f758a7b25f12bceb0b22e08d9726f6"
-
-[[package]]
 name = "base64"
 version = "0.21.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -714,15 +708,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8894febbff9f758034a5b8e12d87918f56dfc64a8e1fe757d65e29041538d93"
 dependencies = [
  "generic-array",
-]
-
-[[package]]
-name = "block-padding"
-version = "0.4.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "710f1dd022ef4e93f8a438b4ba958de7f64308434fa6a87104481645cc30068b"
-dependencies = [
- "hybrid-array",
 ]
 
 [[package]]
@@ -1151,7 +1136,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773f3b9af64447d2ce9850330c473515014aa235e6a783b02db81ff39e4a3dad"
 dependencies = [
  "crypto-common",
- "inout 0.1.4",
+ "inout",
  "zeroize",
 ]
 
@@ -2084,12 +2069,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d0881ea181b1df73ff77ffaaf9c7544ecc11e82fba9b5f27b262a3c73a332555"
 
 [[package]]
-name = "easy-ext"
-version = "1.0.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc5d6d6a8504f8caedd7de14576464383900cd3840b7033a7a3dce5ac00121ca"
-
-[[package]]
 name = "ecdsa"
 version = "0.16.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2118,7 +2097,7 @@ version = "0.13.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b5e6043086bf7973472e0c7dff2142ea0b680d30e18d9cc40f267efbf222bd47"
 dependencies = [
- "base16ct 0.2.0",
+ "base16ct",
  "crypto-bigint",
  "digest",
  "ff",
@@ -2976,15 +2955,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df3b46402a9d5adb4c86a0cf463f42e19994e3ee891101b1841f30a545cb49a9"
 
 [[package]]
-name = "hybrid-array"
-version = "0.4.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b41fb3dc24fe72c2e3a4685eed55917c2fb228851257f4a8f2d985da9443c3e5"
-dependencies = [
- "typenum",
-]
-
-[[package]]
 name = "hyper"
 version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3244,18 +3214,8 @@ version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "879f10e63c20629ecabbb64a8010319738c66a5cd0c29b02d63d272b03751d01"
 dependencies = [
- "block-padding 0.3.3",
+ "block-padding",
  "generic-array",
-]
-
-[[package]]
-name = "inout"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4250ce6452e92010fdf7268ccc5d14faa80bb12fc741938534c58f16804e03c7"
-dependencies = [
- "block-padding 0.4.2",
- "hybrid-array",
 ]
 
 [[package]]
@@ -5549,7 +5509,7 @@ version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d3e97a565f76233a6003f9f5c54be1d9c5bdfa3eccfb189469f11ec4901c47dc"
 dependencies = [
- "base16ct 0.2.0",
+ "base16ct",
  "der",
  "generic-array",
  "pkcs8",
@@ -6258,17 +6218,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "standback"
-version = "0.4.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "65830fc2f5e53e904a5e2ffc75c5a6582019563bbba103145d4decada88c13ef"
-dependencies = [
- "easy-ext",
- "libc",
- "version_check",
-]
-
-[[package]]
 name = "static_assertions"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6581,7 +6530,7 @@ checksum = "4752a97f8eebd6854ff91f1c1824cd6160626ac4bd44287f7f4ea2035a02a242"
 dependencies = [
  "const_fn",
  "libc",
- "standback 0.2.17",
+ "standback",
  "stdweb",
  "time-macros 0.1.1",
  "version_check",
@@ -6638,7 +6587,7 @@ dependencies = [
  "proc-macro-hack",
  "proc-macro2",
  "quote",
- "standback 0.2.17",
+ "standback",
  "syn 1.0.109",
 ]
 
@@ -7904,10 +7853,12 @@ dependencies = [
  "arrayvec",
  "async-graphql",
  "axum",
- "base16ct 1.0.0",
+ "base16ct",
  "base64 0.22.1",
+ "bitflags",
  "byteorder",
  "bytes",
+ "cala-cel-interpreter",
  "cala-ledger",
  "cala-ledger-core-types",
  "cc",
@@ -7915,6 +7866,8 @@ dependencies = [
  "cipher",
  "clap",
  "clap_builder",
+ "concurrent-queue",
+ "crossbeam-utils",
  "crypto-common",
  "der",
  "deranged",
@@ -7934,16 +7887,18 @@ dependencies = [
  "futures-task",
  "futures-util",
  "generic-array",
- "getrandom 0.3.4",
+ "getrandom 0.2.17",
  "group",
+ "hashbrown 0.14.5",
  "hashbrown 0.16.0",
  "hmac",
  "hyper",
  "hyper-util",
  "idna",
  "indexmap 2.12.0",
- "inout 0.2.2",
+ "inout",
  "job 0.2.10",
+ "job 0.6.3",
  "lalrpop-util",
  "log",
  "memchr",
@@ -7956,7 +7911,7 @@ dependencies = [
  "pkcs8",
  "prost 0.13.5",
  "rand 0.9.2",
- "rand_core 0.9.3",
+ "rand_core 0.6.4",
  "regex-automata",
  "regex-syntax",
  "reqwest",
@@ -7975,7 +7930,7 @@ dependencies = [
  "spki",
  "sqlx-core",
  "sqlx-postgres",
- "standback 0.4.4",
+ "standback",
  "subtle",
  "syn 2.0.114",
  "time 0.3.45",
@@ -7987,6 +7942,7 @@ dependencies = [
  "tracing-core",
  "tracing-opentelemetry",
  "tracing-subscriber",
+ "url",
  "uuid",
  "zeroize",
 ]
