@@ -64,35 +64,35 @@ user-onboarding = { path = "lana/user-onboarding" }
 
 # External dependencies
 es-entity = { version = "0.10.5", features = ["event-context", "tracing-context", "instrument"] }
-cala-ledger = "0.12.12"
+cala-ledger = "0.13.9"
 job = "0.2.10"
 sim-time = "0.10"
-cala-cel-interpreter = "0.12"
+cala-cel-interpreter = "0.13"
 
 aes = "0.8"
 anyhow = "1.0.100"
-async-graphql = { version = "7.0.17", default-features = false, features = [
+async-graphql = { version = "7.2.1", default-features = false, features = [
   "dataloader",
   "chrono",
   "playground",
   "tempfile",
   "tracing",
 ] }
-async-graphql-axum = "7.0.17"
+async-graphql-axum = "7.2.1"
 async-trait = "0.1.89"
-axum = { version = "0.8.7", features = ["macros"] }
-axum-extra = { version = "0.12.2", default-features = false, features = [
+axum = { version = "0.8.8", features = ["macros"] }
+axum-extra = { version = "0.12.5", default-features = false, features = [
   "tracing",
   "typed-header",
 ] }
 bip32 = "0.5"
 ccm = "0.5"
 csv = "1.4.0"
-chrono = { version = "0.4.42", features = [
+chrono = { version = "0.4.43", features = [
   "clock",
   "serde",
 ], default-features = false }
-clap = { version = "4.5.53", features = ["derive", "env"] }
+clap = { version = "4.5.57", features = ["derive", "env"] }
 derive_builder = "0.20.0"
 graphql_client = { version = "0.14.0", features = ["reqwest-rustls"] }
 sqlx = { version = "0.8", features = [
@@ -103,11 +103,11 @@ sqlx = { version = "0.8", features = [
   "chrono",
   "json",
 ] }
-thiserror = "2.0.17"
-uuid = { version = "1.18", features = ["serde", "v4"] }
+thiserror = "2.0.18"
+uuid = { version = "1.20", features = ["serde", "v4"] }
 log = "0.4"
-tracing = "0.1.41"
-tracing-opentelemetry = "0.32.0"
+tracing = "0.1.44"
+tracing-opentelemetry = "0.32.1"
 tracing-subscriber = { version = "0.3.20", features = ["env-filter", "json"] }
 opentelemetry = { version = "0.31.0" }
 opentelemetry_sdk = { version = "0.31.0", features = ["rt-tokio"] }
@@ -119,32 +119,32 @@ opentelemetry-otlp = { version = "0.31.0", default-features = false, features = 
 ] }
 opentelemetry-http = "0.31.0"
 opentelemetry-semantic-conventions = { version = "0.31.0", features = ["semconv_experimental"] }
-tokio = { version = "1.48.0", features = [
+tokio = { version = "1.49.0", features = [
   "rt-multi-thread",
   "macros",
   "time",
   "sync",
   "signal",
 ] }
-tokio-stream = { version = "0.1.16", features = ["sync"] }
+tokio-stream = { version = "0.1.18", features = ["sync"] }
 strum = { version = "0.27", features = ["derive"] }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_yaml = "0.9.32"
-serde_json = "1.0.145"
-serde_with = "3.16.0"
+serde_json = "1.0.149"
+serde_with = "3.16.1"
 futures = "0.3.29"
 http = "1.4"
 reqwest = { version = "0.12.24", default-features = false, features = ["json", "rustls-tls", "charset", "http2", "macos-system-configuration", "multipart"] }
 url = { version = "2.5", features = ["serde"] }
-rust_decimal_macros = "1.39.0"
-rust_decimal = "1.38.0"
+rust_decimal_macros = "1.40.0"
+rust_decimal = "1.40.0"
 rusty-money = { version = "0.4", features = ["iso", "crypto"] }
 base64 = { version = "0.22.1" }
-jsonwebtoken = { version = "10.2.0", default-features = false, features = ["aws_lc_rs"] }
+jsonwebtoken = { version = "10.3.0", default-features = false, features = ["aws_lc_rs"] }
 hex = "0.4.3"
 hmac = "0.12.1"
 sha2 = "0.10.8"
-tower-http = { version = "0.6.7", features = ["cors"] }
+tower-http = { version = "0.6.8", features = ["cors"] }
 lettre = { version = "0.11.19", default-features = false, features = ["builder", "tokio1", "tokio1-rustls-tls", "smtp-transport"] }
 sqlx-adapter = { version = "1.8", default-features = false, features = [
   "postgres",
@@ -157,15 +157,15 @@ google-cloud-storage = { version = "0.24.0", default-features = false, features 
   "auth",
 ] }
 rand = "0.9"
-serial_test = { version = "3.2.0", features = ["file_locks"] }
+serial_test = { version = "3.3.1", features = ["file_locks"] }
 chacha20poly1305 = "0.10.1"
-handlebars = "6.3.2"
-schemars = { version = "1.1.0", features = ["derive", "chrono04", "rust_decimal1"] }
-tempfile = "3.23.0"
+handlebars = "6.4.0"
+schemars = { version = "1.2.1", features = ["derive", "chrono04", "rust_decimal1"] }
+tempfile = "3.24.0"
 p256 = "0.13.2"
 pbkdf2 = "0.12"
 pkcs8 = { version = "0.10.2", features = ["encryption"] }
-markdown2pdf = { version = "0.1.9", features = ["rustls-tls"], default-features = false }
+markdown2pdf = { version = "0.2.1", features = ["rustls-tls"], default-features = false }
 bytes = "1.11"
 keycloak = "26.4.0"
 
